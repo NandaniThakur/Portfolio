@@ -19,9 +19,10 @@ import ExperienceSection from './components/ExperienceSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
+
 export default function Home() {
   return (
-    <main className="bg-white overflow-hidden">
+    <main className="bg-slate-950 overflow-hidden">
       {/* Navigation bar - sticky and always visible */}
       <Navigation />
 

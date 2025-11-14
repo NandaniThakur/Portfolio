@@ -30,7 +30,7 @@ const projects: Project[] = [
     description:
       'A full-stack e-commerce solution with real-time inventory, payment integration, and admin dashboard.',
     technologies: ['Next.js', 'Node.js', 'MongoDB', 'Stripe'],
-    color: 'from-blue-100 to-cyan-100',
+    color: 'from-indigo-900/50 to-cyan-900/50',
     icon: '🛍️',
   },
   {
@@ -39,7 +39,7 @@ const projects: Project[] = [
     description:
       'Collaborative task management with real-time updates, team collaboration features, and beautiful UI.',
     technologies: ['React', 'Firebase', 'Tailwind CSS'],
-    color: 'from-green-100 to-emerald-100',
+    color: 'from-purple-900/50 to-indigo-900/50',
     icon: '✅',
   },
   {
@@ -48,7 +48,7 @@ const projects: Project[] = [
     description:
       'Beautiful weather app with location-based forecasts, interactive maps, and smooth animations.',
     technologies: ['React', 'OpenWeather API', 'D3.js'],
-    color: 'from-purple-100 to-pink-100',
+    color: 'from-cyan-900/50 to-purple-900/50',
     icon: '🌤️',
   },
   {
@@ -57,7 +57,7 @@ const projects: Project[] = [
     description:
       'Cloud infrastructure automation with Docker, Kubernetes, and CI/CD pipelines for seamless deployment.',
     technologies: ['Docker', 'Kubernetes', 'AWS', 'GitHub Actions'],
-    color: 'from-amber-100 to-orange-100',
+    color: 'from-indigo-900/50 to-purple-900/50',
     icon: '⚙️',
   },
 ];
@@ -94,23 +94,23 @@ export default function ProjectsSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-green-50 to-blue-50 relative overflow-hidden"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-slate-950 via-indigo-950 to-slate-950 relative overflow-hidden"
       id="projects"
     >
       {/* Decorative background elements */}
-      <div className="absolute top-40 left-0 w-96 h-96 bg-green-200 rounded-full opacity-5 blur-3xl"></div>
-      <div className="absolute bottom-40 right-0 w-80 h-80 bg-blue-200 rounded-full opacity-5 blur-3xl"></div>
+      <div className="absolute top-40 left-0 w-96 h-96 bg-purple-900 rounded-full opacity-20 blur-3xl animate-float-clouds"></div>
+      <div className="absolute bottom-40 right-0 w-80 h-80 bg-cyan-800 rounded-full opacity-15 blur-3xl animate-float-clouds" style={{ animationDelay: '3s' }}></div>
 
       <div className="max-w-6xl mx-auto">
         {/* Section heading */}
         <div className="text-center mb-16 scroll-reveal visible">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-100 mb-4">
             Featured Projects
           </h2>
-          <p className="text-gray-600 mb-6 text-lg">
+          <p className="text-slate-400 mb-6 text-lg">
             Explore some of my recent work and passion projects
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-linear-to-r from-purple-500 to-cyan-500 mx-auto rounded-full"></div>
         </div>
 
         {/* Projects grid */}
@@ -127,23 +127,23 @@ export default function ProjectsSection() {
             >
               {/* Project card */}
               <div
-                className={`bg-gradient-to-br ${project.color} rounded-2xl p-6 h-full border border-opacity-30 border-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 cursor-pointer relative overflow-hidden`}
+                className={`bg-linear-to-br ${project.color} rounded-2xl p-6 h-full border border-purple-500/30 shadow-lg shadow-purple-500/10 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 cursor-pointer relative overflow-hidden backdrop-blur-sm`}
               >
                 {/* Animated background glow on hover */}
-                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
 
                 {/* Content */}
                 <div className="relative z-10">
                   {/* Icon and title */}
                   <div className="flex items-center gap-4 mb-4">
                     <span className="text-4xl">{project.icon}</span>
-                    <h3 className="text-xl font-bold text-gray-800">
+                    <h3 className="text-xl font-bold text-slate-100">
                       {project.title}
                     </h3>
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-700 mb-6 leading-relaxed text-sm">
+                  <p className="text-slate-400 mb-6 leading-relaxed text-sm">
                     {project.description}
                   </p>
 
@@ -152,7 +152,7 @@ export default function ProjectsSection() {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-white bg-opacity-40 text-gray-700 rounded-full text-xs font-medium hover:bg-opacity-60 transition-all duration-300"
+                        className="px-3 py-1 bg-white/10 text-cyan-300 rounded-full text-xs font-medium hover:bg-white/20 transition-all duration-300 border border-cyan-500/30"
                       >
                         {tech}
                       </span>
@@ -162,7 +162,7 @@ export default function ProjectsSection() {
                   {/* View project link */}
                   <a
                     href={project.link || '#'}
-                    className="inline-flex items-center text-green-700 font-semibold hover:text-green-600 transition-colors duration-300"
+                    className="inline-flex items-center text-cyan-400 font-semibold hover:text-cyan-300 transition-colors duration-300"
                   >
                     View Project
                     <svg
@@ -189,7 +189,7 @@ export default function ProjectsSection() {
         <div className="text-center mt-12 scroll-reveal">
           <a
             href="#"
-            className="inline-block px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+            className="inline-block px-8 py-4 bg-linear-to-r from-purple-600 to-cyan-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
           >
             See All Projects →
           </a>

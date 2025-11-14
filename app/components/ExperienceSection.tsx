@@ -87,28 +87,28 @@ export default function ExperienceSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-amber-50 relative overflow-hidden"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-indigo-950 via-slate-950 to-indigo-950 relative overflow-hidden"
     >
       {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-40 h-40 bg-amber-200 rounded-full opacity-5 blur-2xl"></div>
-      <div className="absolute bottom-20 left-10 w-32 h-32 bg-green-200 rounded-full opacity-5 blur-2xl"></div>
+      <div className="absolute top-20 right-10 w-40 h-40 bg-purple-900 rounded-full opacity-20 blur-2xl animate-float-clouds"></div>
+      <div className="absolute bottom-20 left-10 w-32 h-32 bg-cyan-800 rounded-full opacity-20 blur-2xl animate-float-clouds" style={{ animationDelay: '3s' }}></div>
 
       <div className="max-w-4xl mx-auto">
         {/* Section heading */}
         <div className="text-center mb-16 scroll-reveal visible">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-100 mb-4">
             Experience
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-slate-400 mb-6">
             My professional journey and growth
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-green-500 to-amber-500 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-linear-to-r from-purple-500 to-cyan-500 mx-auto rounded-full"></div>
         </div>
 
         {/* Timeline */}
         <div className="relative">
           {/* Vertical line (on larger screens) */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-green-300 via-blue-300 to-amber-300 opacity-50 md:transform md:-translate-x-1/2"></div>
+          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-linear-to-b from-purple-600 via-cyan-500 to-purple-600 opacity-40 md:transform md:-translate-x-1/2"></div>
 
           {/* Timeline items */}
           <div className="space-y-12">
@@ -126,26 +126,26 @@ export default function ExperienceSection() {
               >
                 {/* Content card */}
                 <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-                  <div className="bg-white bg-opacity-60 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-200 border-opacity-30 relative">
+                  <div className="bg-slate-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-6 shadow-lg shadow-purple-500/10 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300 border border-purple-500/30 relative">
                     {/* Decorative leaf */}
-                    <div className="absolute -top-4 -right-4 text-3xl">🍃</div>
+                    <div className="absolute -top-4 -right-4 text-3xl float-clouds">🍃</div>
 
                     {/* Content */}
                     <div className="pr-8">
                       <div className="flex items-center gap-3 mb-2">
                         <span className="text-2xl">{exp.icon}</span>
-                        <h3 className="text-xl font-bold text-gray-800">
+                        <h3 className="text-xl font-bold text-slate-100">
                           {exp.position}
                         </h3>
                       </div>
 
-                      <p className="text-green-700 font-semibold mb-1">
+                      <p className="text-cyan-400 font-semibold mb-1">
                         {exp.company}
                       </p>
 
-                      <p className="text-sm text-gray-500 mb-4">{exp.period}</p>
+                      <p className="text-sm text-slate-500 mb-4">{exp.period}</p>
 
-                      <p className="text-gray-700 mb-4 leading-relaxed">
+                      <p className="text-slate-300 mb-4 leading-relaxed">
                         {exp.description}
                       </p>
 
@@ -154,7 +154,7 @@ export default function ExperienceSection() {
                         {exp.skills.map((skill) => (
                           <span
                             key={skill}
-                            className="px-3 py-1 bg-gradient-to-r from-green-100 to-blue-100 text-green-700 rounded-full text-xs font-medium"
+                            className="px-3 py-1 bg-linear-to-r from-purple-900/50 to-cyan-900/50 text-cyan-300 rounded-full text-xs font-medium border border-purple-500/30"
                           >
                             {skill}
                           </span>
@@ -166,7 +166,7 @@ export default function ExperienceSection() {
 
                 {/* Timeline dot */}
                 <div className="md:w-12 flex justify-center">
-                  <div className="w-4 h-4 bg-gradient-to-r from-green-500 to-blue-500 rounded-full border-4 border-white shadow-lg relative z-10 md:sticky md:top-1/2"></div>
+                  <div className="w-4 h-4 bg-linear-to-r from-purple-500 to-cyan-500 rounded-full border-4 border-slate-950 shadow-lg shadow-purple-500/50 relative z-10 md:sticky md:top-1/2 firefly"></div>
                 </div>
 
                 {/* Empty space for alternating layout */}
